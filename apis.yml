@@ -1,23 +1,94 @@
 aid: appviewx
+
 name: Appviewx
-description: 'Appviewx is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: AppViewX provides machine and AI agent identity security solutions, offering certificate lifecycle management, PKI modernization,
+  post‑quantum cryptography readiness, and comprehensive compliance tools for enterprises. Their platform automates identity governance, secure
+  code signing, and IoT device security, helping organizations manage digital certificates and keys at scale.
+
 url: https://raw.githubusercontent.com/api-evangelist/appviewx/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
-- Company
-apis: []
+- Security
+- Identity
+- PKI
+- Certificate Management
+- AI
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Compliance
+  url: https://trust.appviewx.com/
+- type: WellKnown
+  url: well-known/appviewx-well-known.yml
+- type: Hosts
+  url: hosts/appviewx-hosts.yml
+- type: Vendors
+  url: vendors/appviewx-vendors.yml
+- type: TermsOfService
+  url: https://www.appviewx.com/terms-of-service/
+- type: StatusPage
+  url: https://status.appviewx.com/
+- type: PrivacyPolicy
+  url: https://www.appviewx.com/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/appviewx
+- type: GettingStarted
+  url: https://docs.appviewx.com/2026.2.0/appviewx_setup.html
+- type: Documentation
+  url: https://docs.appviewx.com/
+- type: TrustCenter
+  url: security/appviewx-trust-center.yml
+- type: DomainSecurity
+  url: security/appviewx-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/appviewx
+  url: https://www.appviewx.com
+
+apis:
+- name: Appviewx API
+  description: API documentation is not publicly machine-readable; attempts to fetch OpenAPI specs returned 404 on both api and docs hosts.
+  humanURL: https://docs.appviewx.com/2026.2.0/index.html
+  baseURL: null
+  x-coverage:
+    state: unreadable
+    reason: js-rendered-docs
+    detail: Documentation pages return HTML and no OpenAPI spec was found at common endpoints on api.appviewx.com or docs.appviewx.com.
+    evidence:
+    - url: https://api.appviewx.com/openapi.json
+      status: 0
+    - url: https://docs.appviewx.com/openapi.json
+      status: 404
+    checked: 2026-09-25
+  aid: appviewx:appviewx-api
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
