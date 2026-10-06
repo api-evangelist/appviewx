@@ -19,7 +19,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-25'
 
-modified: '2026-09-25'
+modified: '2026-10-06'
 
 tags:
 - Security
@@ -41,6 +41,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://www.appviewx.com/feed/
+  type: BlogRSS
 - type: Compliance
   url: https://trust.appviewx.com/
 - type: WellKnown
