@@ -1,0 +1,24 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://aws.amazon.com/marketplace/
+marketplace_apps: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=c0aa9d55-65be-47bb-a87d-66e74a75ddec
+  listing_count: 4
+  apps:
+  - AppViewX AVX ONE CLM
+  - AppViewX AVX ONE PKIaaS
+  - AppViewX AVX ONE CLM for Kubernetes
+  - AppViewX ADC+
+  seller_name: AppViewX
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
